@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28555622-BBE0-42A3-8653-FDEBF6D8017D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OOP_ProjectManagement</RootNamespace>
+    <AssemblyName>OOP-ProjectManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\maeve\source\pablish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>DA70AA25C0F178D92320FB54DF2391C7801C7671</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PMAppGUI_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PMDatabaseAccountableDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMDatabaseAccountableDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PMDatabaseConsultedDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMDatabaseConsultedDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PMDatabaseProjectsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMDatabaseProjectsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PMDatabaseResponsibleDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMDatabaseResponsibleDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectCreateForm.Designer.cs">
+      <DependentUpon>ProjectCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResourceCreateForm.Designer.cs">
+      <DependentUpon>ResourceCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatusCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatusCreateForm.Designer.cs">
+      <DependentUpon>StatusCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskCreateForm.Designer.cs">
+      <DependentUpon>TaskCreateForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="TaskCreateForm.resx">
+      <DependentUpon>TaskCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="PMAppGUI_TemporaryKey.pfx" />
+    <None Include="PMDatabaseAccountableDataSet.xsc">
+      <DependentUpon>PMDatabaseAccountableDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PMDatabaseAccountableDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMDatabaseAccountableDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMDatabaseAccountableDataSet.xss">
+      <DependentUpon>PMDatabaseAccountableDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PMDatabaseConsultedDataSet.xsc">
+      <DependentUpon>PMDatabaseConsultedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PMDatabaseConsultedDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMDatabaseConsultedDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMDatabaseConsultedDataSet.xss">
+      <DependentUpon>PMDatabaseConsultedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PMDatabaseProjectsDataSet.xsc">
+      <DependentUpon>PMDatabaseProjectsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PMDatabaseProjectsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMDatabaseProjectsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMDatabaseProjectsDataSet.xss">
+      <DependentUpon>PMDatabaseProjectsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PMDatabaseResponsibleDataSet.xsc">
+      <DependentUpon>PMDatabaseResponsibleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PMDatabaseResponsibleDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMDatabaseResponsibleDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMDatabaseResponsibleDataSet.xss">
+      <DependentUpon>PMDatabaseResponsibleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PMClassLibrary\ProjectManagementLibrary.csproj">
+      <Project>{d1323afe-ed74-4462-b57b-f61c40b0ee6e}</Project>
+      <Name>ProjectManagementLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PMDatabase\PMDatabase.sqlproj">
+      <Project>{f73b95ef-c93d-4e34-aae8-8cd7ec75b678}</Project>
+      <Name>PMDatabase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
